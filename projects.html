@@ -1,51 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="./assets/styles/projects.css">
 </head>
+
 <body>
-    
+
     <header>
+
         <nav>
-            <ul class="nav-bar">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
-                </li>
+            <button class="btn-menu" type="button">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </button>
+            <div class="container" id="sidebar">
+                <button class="btn-close ">
+                    <img class="btn-hover btn-active" src="./assets/images/arrow-left-circle-fill.svg" alt="">
+                </button>
+                <ul class="nav-bar">
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link btn-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link btn-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contributors" class="nav-link btn-link">Contributors</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link btn-link">Contact</a>
+                    </li>
+                </ul>
                 
-            </ul>
+
+            </div>
+
         </nav>
+
+
+
+        <article class="intro">
+            
+        </article>
     </header>
 
     <main>
-       
+
+
+
         <article class="projects">
             <div class="container">
                 <!-- here all the projects will be there -->
-                 <!-- this is the project div template -->
+                <!-- this is the project div template -->
 
-                 <section class="project-card">
+                <section class="project-card">
                     <figure class="project-img">
                         <img src="" alt="">
                     </figure>
                     <h2>Project Title</h2>
                     <p>Technologies Used: <span class="techs">tech-1, tech-2,etc</span></p>
                     <a href="#">project link</a>
-                 </section>
+                </section>
             </div>
         </article>
 
         <article class="contributors">
             <!-- each section will be details of the contributors of this project and their portfolio link -->
-           
+
             <h2>Contributors</h2>
             <!-- each section will be inline-block -->
             <section class="contributor">
@@ -71,4 +99,5 @@
 
     <script src="./assets/script/projects.js"></script>
 </body>
+
 </html>

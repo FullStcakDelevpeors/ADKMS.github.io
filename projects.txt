@@ -1,0 +1,17 @@
+navigation bar
+
+projects home about contributors 
+
+
+main page with full stack photo and details about the group
+
+projects section
+
+this section will have projects cards
+
+about page
+
+contact page
+
+footer page
+
