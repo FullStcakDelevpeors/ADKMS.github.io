@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Option 2: Import via CSS */
 
 
@@ -19,7 +20,23 @@
     --circle: 50%;
 }
 
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
 
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--section-color);
+}
+
+body{
+    background-color: var(--primary-color);
+}
 
 /* reused styled */
 a,
@@ -27,7 +44,7 @@ span,
 input,
 button,
 textarea {
-    display: inline-block;
+    display: block;
 }
 
 .text-center {
@@ -39,127 +56,281 @@ a {
     color: inherit;
 }
 
-.btn-hover:hover{
+.btn-hover:hover {
     background-color: var(--color-2);
     border: 1px solid var(--color-2);
 }
-.btn-active:active{
+
+.btn-active:active {
     background-color: var(--text-white);
     border: 1px solid var(--text-white);
 }
-.btn-link:hover{
-    color:var(--color-2)
+
+.btn-link:hover {
+    color: var(--color-2)
 }
-.btn-link:active{
+
+.btn-link:active {
     color: var(--text-white);
+}
+
+.btnPrimary {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 6px 12px;
+    position: relative;
+    width: fit-content;
+    margin: 10px auto;
+
+}
+
+.btnPrimary::before,
+.btnPrimary::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-1);
+    transition: width 0.3s;
+
+}
+
+.btnPrimary::before {
+    top: 0;
+    left: 0;
+}
+
+.btnPrimary::after {
+    bottom: 0;
+    right: 0;
+}
+
+.btnPrimary .b-1,
+.btnPrimary .b-2 {
+    position: absolute;
+    width: 3px;
+    background-color: var(--color-1);
+    height: 0;
+    transition: height 0.3s;
+}
+
+.btnPrimary .b-1 {
+    left: 0;
+    top: 0;
+}
+
+.btnPrimary .b-2 {
+    right: 0;
+    bottom: 0;
+}
+
+.btnPrimary:hover {
+    color: var(--color-2);
+}
+
+.btnPrimary:hover::after,
+.btnPrimary:hover::before {
+    width: 100%;
+}
+
+.btnPrimary:hover .b-1,
+.btnPrimary:hover .b-2 {
+    height: 100%;
 }
 
 
 /* navigation bar */
 
-nav{
+nav {
     display: flex;
-    justify-content: end;
+    justify-content: space-between !important;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: center;
     background-color: var(--primary-color);
     height: 50px;
 }
 
+
 /* menu button */
 .btn-menu {
-    width:35px;
+    width: 35px;
     margin-right: 5px;
-    gap:5px;
+    gap: 5px;
     display: flex;
     flex-flow: nowrap column;
     justify-content: center;
     background-color: transparent;
-    border:none;
+    border: none;
     cursor: pointer;
 }
-.btn-menu .line{
-    width:100%;
+
+.btn-menu .line {
+    width: 100%;
     height: 3px;
     background-color: var(--color-1);
-    animation:grow 0.7s infinite linear alternate;
+    animation: grow 0.7s infinite linear alternate;
 }
 
-.btn-menu:hover .line{
-background-color: var(--color-2);
-}
-.btn-menu:active .line{
-background-color: var(--text-white);
+.btn-menu:hover .line {
+    background-color: var(--color-2);
 }
 
-.btn-menu .line-2{
- animation-delay: 200ms;
+.btn-menu:active .line {
+    background-color: var(--text-white);
 }
-.btn-menu .line-3{
- animation-delay: 300ms;
+
+.btn-menu .line-2 {
+    animation-delay: 200ms;
 }
+
+.btn-menu .line-3 {
+    animation-delay: 300ms;
+}
+
 @keyframes grow {
-    from{
-        width:0;
-    }to{
-        width:100%;
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
     }
 }
 
 /* navigation bar for smaller screens */
 
 nav .container {
-    border:1px solid transparent;
+    border: 1px solid transparent;
     background-color: var(--section-color);
-    height:100vh;
+    height: 100vh;
     position: absolute;
-    z-index:5;
-    top:0;
-    left:-100%;
-    width:min(80%,500px);
+    z-index: 5;
+    top: 0;
+    left: -100%;
+    width: min(80%, 500px);
     transition: 400ms linear;
 }
 
 
-[data-sidebar-active]{
-    left:0 !important;
+
+[data-sidebar-active] {
+    left: 0 !important;
 }
 
-.nav-bar{
+.nav-bar {
     display: flex;
     flex-flow: column nowrap;
     list-style: none;
 
-    width:100%;
+    width: 100%;
     height: 80%;
-    padding:2rem 1rem 0 1rem;
+    padding: 2rem 1rem 0 1rem;
 
-    gap:30px;
+    gap: 30px;
 }
-.nav-link{
+
+.nav-link {
     position: relative;
-    width:100%;
-    font-size:1.6rem;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 1.6rem;
     color: var(--color-1);
     border-bottom: 1px solid var(--text-light);
     overflow: hidden;
+
 }
 
-.btn-close{
+.btn-close {
     position: absolute;
-    right:1rem;
-    top:1rem;
+    right: 1rem;
+    top: 0.3rem;
     border: none;
-    width:30px;
-    height:30px;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
     cursor: pointer;
-    
+
 }
 
-.btn-close img{
+.btn-close img {
     background-color: var(--color-1);
-    width:100%;
+    width: 100%;
     height: 100%;
     border: 1px solid var(--color-1);
     border-radius: var(--circle);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* project card */
+.projects {
+    background-color: var(--color-2);
+    padding: 1rem;
+    border-bottom: 1px solid black;;
+}
+
+.projects .container {
+    padding:1rem 0;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow:hidden;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.project-card {
+    background-color: var(--section-color);
+    color: var(--text-light);
+    border-radius: 5px;
+
+    height: 350px;
+    width: 200px;
+    padding: 10px;
+
+    text-align: center;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+
+    transition: all 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.project-card:hover {
+    box-shadow: 8px 8px 8px var(--section-color);
+    transform: scale(1.02);
+}
+
+
+.contributors{
+    background-color: var(--color-2);
+    border-bottom: 1px solid black;
+}
+
+
+.copyright {
+    background-color: var(--section-color);
+    color: var(--text-light);
+    text-align: end;
+    padding:1rem;
+}
