@@ -5,218 +5,357 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <link rel="stylesheet" href="./assets/styles/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/styles/projects.css">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 
-    <header>
-
-        <nav>
-            <a href="#all-projects" class="nav-link btn-link" style="border:none;width:fit-content;">Projects</a>
-            <button class="btn-menu" type="button">
-                <span class="line line-1"></span>
-                <span class="line line-2"></span>
-                <span class="line line-3"></span>
-            </button>
-            <div class="container" id="sidebar">
-                <button class="btn-close ">
-                    <img class="btn-hover btn-active" src="./assets/images/arrow-left-circle-fill.svg" alt="">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+            <div class="container-fluid  ">
+                <a class="navbar-brand" href="#">FullStcakDelevpeors</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <ul class="nav-bar">
-                    <li class="nav-item">
-                        <a href="#all-projects" class="nav-link btn-link">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link btn-link">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#contributors" class="nav-link btn-link">Contributors</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link btn-link">Contact</a>
-                    </li>
-                </ul>
-                
-
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav justify-content-around w-100 text-center text-uppercase fw-bold nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contributor">Contributors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
         </nav>
 
-
-
-        <article class="intro">
-            
-        </article>
     </header>
 
-    <main>
+    <main class=" ">
 
+        <section class="hero text-center bg-secondary py-2 border-bottom border-dark border-5 ">
+            <div class="img-holder">
+                <img src="./assets/images/Intro-Img.jpg" alt="intro imgage" class="img-fluid rounded-circle" >
+                <h1 class="h1 display-1">FullStcakDelevpeors</h1>
+            </div>
+        </section>
 
+        <section id="projects" class="bg-secondary py-2 border-bottom border-dark border-5">
+            <h1 class="h1 text-light text-center ">Recently Added </h1>
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel carousel-dark ">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <!-- add here your most recently added projects -->
+                        <div class="project container-fluid   py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6 project-img">
+                                    <img class="img-fluid" src="./assets/images/simplecard.png" alt="">
+                                </div>
+                                <div
+                                    class="col-12 col-md-6 project-details p-5 p-md-2 text-center text-light d-flex flex-column justify-content-center  ">
 
-        <article class="projects" id="all-projects">
-            <div class="container">
-                <!-- here all the projects will be there -->
-                <!-- this is the project div template -->
+                                    <h1 class="project-name">Simple Card</h1>
+                                    <p class="project-name">A simple card with an image, heading , description along
+                                        with a link.</p>
+                                    <div class="contrubutor my-1">
+                                        By:
+                                        <a href="#"
+                                            class="  text-decoration-none  d-block contributor-name fw-bold lead ">Mahesh
+                                            Maharana</a>
+                                        <!-- add the contributor link -->
+                                    </div>
+                                    <a href="#" class="btn btn-primary d-block mx-auto w-25 text-uppercase " target="_blank">go </a>
+                                </div>
 
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="simplecard">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <!-- add here your most recently added projects -->
+                        <div class="project container-fluid  py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6 project-img">
+                                    <img class="img-fluid" src="./assets/images/simplecard.png" alt="">
+                                </div>
+                                <div
+                                    class="col-12 col-md-6 project-details p-5 p-md-2 text-center text-light d-flex flex-column justify-content-center  ">
 
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary" target="_blank"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
+                                    <h1 class="project-name">Simple Card</h1>
+                                    <p class="project-name">A simple card with an image, heading , description along
+                                        with a link.</p>
+                                    <div class="contrubutor my-1">
+                                        By:
+                                        <a href="#"
+                                            class="  text-decoration-none  d-block contributor-name fw-bold lead ">Mahesh
+                                            Maharana</a>
+                                        <!-- add the contributor link -->
+                                    </div>
+                                    <a href="#" class="btn btn-primary d-block mx-auto w-25 text-uppercase " target="_blank">go </a>
+                                </div>
 
-<!-- start -->
- <!-- from start to end delete this is only for demo purpose -->
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- add here your most recently added projects -->
+                        <div class="project container-fluid  py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6 project-img">
+                                    <img class="img-fluid" src="./assets/images/simplecard.png" alt="">
+                                </div>
+                                <div
+                                    class="col-12 col-md-6 project-details p-5 p-md-2 text-center text-light d-flex flex-column justify-content-center  ">
 
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
+                                    <h1 class="project-name">Simple Card</h1>
+                                    <p class="project-name">A simple card with an image, heading , description along
+                                        with a link.</p>
+                                    <div class="contrubutor my-1">
+                                        By:
+                                        <a href="#"
+                                            class="  text-decoration-none  d-block contributor-name fw-bold lead ">Mahesh
+                                            Maharana</a>
+                                        <!-- add the contributor link -->
+                                    </div>
+                                    <a href="#" class="btn btn-primary d-block mx-auto w-25 text-uppercase " target="_blank">go </a>
+                                </div>
 
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
-
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
-
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
-
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
-
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
-
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
-
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
-
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
-
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-                <section class="project-card">
-                    <figure class="project-img">
-                        <img src="./assets/images/simplecard.png" alt="">
-                    </figure>
-                    <h2>Simple Card</h2>
-                    <!-- here give the mahesh contributors link  -->
-                    <p>Completed By: <a href="#" class="nav-link btn-link"> Mahesh Maharana</a></p>
-
-                    <a href="./projects/simplecard/anotherCard.html" class="btnPrimary"> <span class="b-1"></span>goto project <span class="b-2"></span></a>
-                </section>
-     
-<!-- end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
-        </article>
-
-        <article class="contributors">
-            <!-- each section will be details of the contributors of this project and their portfolio link -->
-
-            <h2>Contributors</h2>
-            <!-- each section will be inline-block -->
-            <section class="contributor">
-                <div class="contributor-img">
-                    <img src="20path_to_contributor_image.jpg" alt="Contributor Name">
+            <div class="container-fluid all-projects">
+                <div class="row">
+                    <h1 class="h1 text-light text-center">Projects</h1>
                 </div>
-                <h3>Contributor Name</h3>
-                <p>
-                    <a href="#" target="_blank">View Portfolio</a>
-                </p>
-            </section>
-        </article>
+                <div class="row p-3 gap-2 justify-content-center align-items-center">
+                    <!-- add all projects here  -->
+                    <div class="project-1 col-12  col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                        <div class="project-img-btn position-relative w-100 h-100 ">
+                            <img src="./assets/images/simplecard.png" alt="" class=" w-100 h-100 project-img">
+                            <div
+                                class="project-hover position-absolute top-0 start-0 bg-primary h-100 w-100 d-flex justify-content-center align-items-center ">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#simple-card">Open Project</button>
+                            </div>
+                        </div>
+                        <div id="simple-card" class=" modal fade ">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content text-bg-dark">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title ">Little Lemon</h4>
+                                        <button class=" btn-close bg-light " type="button" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+    
+                                        <img src="./assets/images/simplecard.png" alt="simple-card" 
+                                            class=" rounded w-100">
+                                        <div class="modal-content border border-0 text-bg-dark">
+                                      
+    
+                                            <p class=" my-1">
+                                                A simple card with an image, heading, description along with a link.
+                                            </p>
+                                            <div class="contrubutor my-1 text-center">
+                                                By:
+                                                <a href="#"
+                                                    class="text-decoration-none d-block contributor-name fw-bold lead ">Mahesh
+                                                    Maharana</a>
+                                                <!-- add the contributor link -->
+                                            </div>
+                                            <a href="./projects/simplecard/anotherCard.html"
+                                                class="card-link btn btn-primary d-block text-uppercase" target="_blank">go to project</a>
+                                        </div>
+    
+    
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" data-bs-dismiss="modal"
+                                            class="btn btn-danger rounded-pill">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="project-2 col-12  col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                        <div class="project-img-btn position-relative w-100 h-100 ">
+                            <img src="./assets/images/simplecard.png" alt="" class=" w-100 h-100 project-img">
+                            <div
+                                class="project-hover position-absolute top-0 start-0 bg-primary h-100 w-100 d-flex justify-content-center align-items-center ">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#simple-card">Open Project</button>
+                            </div>
+                        </div>
+                        <div id="simple-card" class=" modal fade ">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content text-bg-dark">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title ">Little Lemon</h4>
+                                        <button class=" btn-close bg-light " type="button" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+    
+                                        <img src="./assets/images/simplecard.png" alt="simple-card" 
+                                            class=" rounded w-100">
+                                        <div class="modal-content border border-0 text-bg-dark">
+                                      
+    
+                                            <p class=" my-1">
+                                                A simple card with an image, heading, description along with a link.
+                                            </p>
+                                            <div class="contrubutor my-1 text-center">
+                                                By:
+                                                <a href="#"
+                                                    class="text-decoration-none d-block contributor-name fw-bold lead ">Mahesh
+                                                    Maharana</a>
+                                                <!-- add the contributor link -->
+                                            </div>
+                                            <a href="./projects/simplecard/anotherCard.html"
+                                                class="card-link btn btn-primary d-block text-uppercase" target="_blank">go to project</a>
+                                        </div>
+    
+    
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" data-bs-dismiss="modal"
+                                            class="btn btn-danger rounded-pill">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-3 col-12  col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                        <div class="project-img-btn position-relative w-100 h-100 ">
+                            <img src="./assets/images/simplecard.png" alt="" class=" w-100 h-100 project-img">
+                            <div
+                                class="project-hover position-absolute top-0 start-0 bg-primary h-100 w-100 d-flex justify-content-center align-items-center ">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#simple-card">Open Project</button>
+                            </div>
+                        </div>
+                        <div id="simple-card" class=" modal fade ">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content text-bg-dark">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title ">Little Lemon</h4>
+                                        <button class=" btn-close bg-light " type="button" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+    
+                                        <img src="./assets/images/simplecard.png" alt="simple-card" 
+                                            class=" rounded w-100">
+                                        <div class="modal-content border border-0 text-bg-dark">
+                                      
+    
+                                            <p class=" my-1">
+                                                A simple card with an image, heading, description along with a link.
+                                            </p>
+                                            <div class="contrubutor my-1 text-center">
+                                                By:
+                                                <a href="#"
+                                                    class="text-decoration-none d-block contributor-name fw-bold lead ">Mahesh
+                                                    Maharana</a>
+                                                <!-- add the contributor link -->
+                                            </div>
+                                            <a href="./projects/simplecard/anotherCard.html"
+                                                class="card-link btn btn-primary d-block text-uppercase" target="_blank">go to project</a>
+                                        </div>
+    
+    
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" data-bs-dismiss="modal"
+                                            class="btn btn-danger rounded-pill">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-4 col-12  col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
+                        <div class="project-img-btn position-relative w-100 h-100 ">
+                            <img src="./assets/images/simplecard.png" alt="" class=" w-100 h-100 project-img">
+                            <div
+                                class="project-hover position-absolute top-0 start-0 bg-primary h-100 w-100 d-flex justify-content-center align-items-center ">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#simple-card">Open Project</button>
+                            </div>
+                        </div>
+                        <div id="simple-card" class=" modal fade ">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content text-bg-dark">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title ">Little Lemon</h4>
+                                        <button class=" btn-close bg-light " type="button" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+    
+                                        <img src="./assets/images/simplecard.png" alt="simple-card" 
+                                            class=" rounded w-100">
+                                        <div class="modal-content border border-0 text-bg-dark">
+                                      
+    
+                                            <p class=" my-1">
+                                                A simple card with an image, heading, description along with a link.
+                                            </p>
+                                            <div class="contrubutor my-1 text-center">
+                                                By:
+                                                <a href="#"
+                                                    class="text-decoration-none d-block contributor-name fw-bold lead ">Mahesh
+                                                    Maharana</a>
+                                                <!-- add the contributor link -->
+                                            </div>
+                                            <a href="./projects/simplecard/anotherCard.html"
+                                                class="card-link btn btn-primary d-block text-uppercase" target="_blank">go to project</a>
+                                        </div>
+    
+    
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" data-bs-dismiss="modal"
+                                            class="btn btn-danger rounded-pill">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </section>
+
+        <section id="contributor py-2">
+
+        </section>
     </main>
 
+    <footer class="">
+        <section id="about">
 
-
-    <footer>
-        <div class="copyright">
-            <div id="little-lemon">Copyright &copy; Full Stack Developers</div>
-        </div>
+        </section>
     </footer>
 
-    <script src="./assets/script/projects.js"></script>
+
+
+
+    <script src="./assets/script/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
